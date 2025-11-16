@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kéo Búa Bao Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Kéo Búa Bao (RPS) Online</h1>
+    
+    <div id="game-container">
+        <div id="lobby">
+            <h2>Chờ đối thủ...</h2>
+            <p>ID của bạn: <span id="player-id"></span></p>
+            <p>Mời bạn bè tham gia.</p>
+        </div>
+
+        <div id="game" style="display: none;">
+            <h3>Lượt chơi của bạn:</h3>
+            <div id="choices">
+                <button data-choice="rock">✊ Búa</button>
+                <button data-choice="paper">✋ Bao</button>
+                <button data-choice="scissors">✌️ Kéo</button>
+            </div>
+            <p>Bạn đã chọn: <span id="your-choice">Chưa chọn</span></p>
+            <p>Đối thủ đã chọn: <span id="opponent-choice">Đang chờ</span></p>
+            <h2 id="result-message"></h2>
+            <p>Điểm: Bạn <span id="score-you">0</span> - Đối thủ <span id="score-opponent">0</span></p>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>

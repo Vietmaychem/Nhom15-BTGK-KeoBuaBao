@@ -1,0 +1,94 @@
+/* public/style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+#game-container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 25px;
+}
+
+/* Phần Scoreboard */
+#scoreboard {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #e9ecef;
+}
+
+/* Các nút lựa chọn */
+#choices {
+    margin: 30px 0;
+}
+
+#choices button {
+    padding: 15px 30px;
+    font-size: 28px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50; /* Màu xanh lá cây */
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#choices button:hover:not(:disabled) {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#choices button:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+    opacity: 0.8;
+}
+
+/* Hiển thị lựa chọn */
+#selection-display p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.selection {
+    font-weight: bold;
+    color: #007bff;
+}
+
+#round-status {
+    font-size: 1.8em;
+    font-weight: 900;
+    margin: 20px 0;
+    color: #dc3545; /* Màu đỏ cho kết quả */
+    animation: pulse 1s infinite alternate;
+}
+
+/* Animation cho thông báo kết quả */
+@keyframes pulse {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(1.05); opacity: 0.9; }
+}
+
+/* Phần Lobby */
+#lobby {
+    padding: 50px;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+}

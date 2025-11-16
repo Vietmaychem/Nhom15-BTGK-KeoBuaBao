@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kéo Búa Bao</title>
+<style>
+  body { font-family: Arial; text-align: center; margin-top: 50px; }
+  button { margin: 5px; padding: 10px 20px; font-size: 16px; }
+  #loadingIndicator { display: none; }
+</style>
+</head>
+<body>
+
+<h1>Kéo Búa Bao</h1>
+
+<div>
+  <button id="createRoomBtn">Tạo phòng</button>
+  <input id="roomInput" placeholder="Nhập mã phòng">
+  <button id="joinRoomBtn">Tham gia phòng</button>
+</div>
+
+<h2 id="statusMessage">Chọn kéo, búa hoặc bao để bắt đầu!</h2>
+<div id="loadingIndicator">Loading...</div>
+
+<div>
+  <button class="choiceBtn" data-choice="rock">Kéo</button>
+  <button class="choiceBtn" data-choice="paper">Bao</button>
+  <button class="choiceBtn" data-choice="scissors">Búa</button>
+</div>
+
+<h3>Lựa chọn:</h3>
+<p>Bạn: <span id="playerChoice">-</span></p>
+<p>Đối thủ: <span id="opponentChoice">-</span></p>
+
+<script type="module" src="/client.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+</body>
+</html>
